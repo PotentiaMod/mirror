@@ -96,6 +96,9 @@ jobs:
           NODE_ENV: production
           ROUTING_STYLE: hash
 
+      - name: Patch TurboWarp trampoline URL
+        run: python3 patch.py
+
       - name: Replace green flag assets (post-build patch)
         run: |
           curl -fL https://cattymod.app/assets/go-icon/play/flag.svg -o /tmp/green-flag.svg
