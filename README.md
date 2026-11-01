@@ -13,7 +13,7 @@ If you have a GitHub account, it's easy to make your own mirror with a URL like:
 4. Go to the "Actions" tab on your fork > Enable actions > Deploy to GitHub Pages > Enable workflow.
 5. Wait a few minutes and go back to the Pages settings. There will be a link to the live version of your mirror.
 
-The mirror will update automatically around once a week. You can manually trigger updates if you go to Actions > Deploy to GitHub Pages > Run workflow > Run on `main`.
+The mirror will update automatically every day. You can manually trigger updates if you go to Actions > Deploy to GitHub Pages > Run workflow > Run on `main`.
 
 ## License
 
