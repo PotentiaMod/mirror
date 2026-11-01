@@ -1,8 +1,8 @@
-# Mirror
+# CattyMod Mirror
 
-https://mirror.turbowarp.xyz/
+https://cattymod.app/mirror
 
-These are some scripts for making mirrors of [TurboWarp](https://turbowarp.org/).
+These are some scripts for making mirrors of [CattyMod Studio](https://studio.cattymod.app/).
 
 ## How to make your own mirror
 
