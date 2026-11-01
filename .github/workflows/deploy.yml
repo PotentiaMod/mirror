@@ -28,7 +28,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: cattymod/scratch-gui
-          ref: deploy
+          ref: develop
           path: scratch-gui
 
       - name: Enable mirrored news
