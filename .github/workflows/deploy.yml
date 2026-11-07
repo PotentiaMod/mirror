@@ -99,12 +99,6 @@ jobs:
       - name: Patch TurboWarp trampoline URL
         run: python3 patch.py
 
-      - name: Replace green flag assets (post-build patch)
-        run: |
-          curl -fL https://potentiamod.app/assets/go-icon/play/flag.svg -o /tmp/green-flag.svg
-          find ./scratch-gui/build -type f -name "green-flag*.svg" -exec cp /tmp/green-flag.svg {} \;
-          rm /tmp/green-flag.svg
-
       - name: Fix artifact permissions
         run: chmod -R +rwx ./scratch-gui/build/
 
