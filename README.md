@@ -1,8 +1,8 @@
-# CattyMod Mirror
+# PotentiaMod Mirror
 
-https://cattymod.app/mirror
+https://potentiamod.github.io/mirror
 
-These are some scripts for making mirrors of [CattyMod Studio](https://studio.cattymod.app/).
+These are some scripts for making mirrors of [PotentiaMod Studio](https://potentiamod.github.io/).
 
 ## How to make your own mirror
 
