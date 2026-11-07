@@ -24,10 +24,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Checkout CattyMod scratch-gui
+      - name: Checkout PotentiaMod scratch-gui
         uses: actions/checkout@v4
         with:
-          repository: cattymod/scratch-gui
+          repository: potentiamod/scratch-gui
           ref: develop
           path: scratch-gui
 
@@ -50,7 +50,7 @@ jobs:
           print("Enabled mirrored news!")
           PY
 
-      - name: Inject CattyMod commit version into settings
+      - name: Inject PotentiaMod commit version into settings
         working-directory: scratch-gui
         run: |
           python3 - <<'PY'
@@ -75,7 +75,7 @@ jobs:
           content = content.replace(placeholder, commit)
           settings.write_text(content)
 
-          print(f"Injected CattyMod commit version: {commit}")
+          print(f"Injected PotentiaMod commit version: {commit}")
           PY
 
       - name: Install Node.js
@@ -101,7 +101,7 @@ jobs:
 
       - name: Replace green flag assets (post-build patch)
         run: |
-          curl -fL https://cattymod.app/assets/go-icon/play/flag.svg -o /tmp/green-flag.svg
+          curl -fL https://potentiamod.app/assets/go-icon/play/flag.svg -o /tmp/green-flag.svg
           find ./scratch-gui/build -type f -name "green-flag*.svg" -exec cp /tmp/green-flag.svg {} \;
           rm /tmp/green-flag.svg
 
