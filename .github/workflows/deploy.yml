@@ -50,34 +50,6 @@ jobs:
           print("Enabled mirrored news!")
           PY
 
-      - name: Inject PotentiaMod commit version into settings
-        working-directory: scratch-gui
-        run: |
-          python3 - <<'PY'
-          import subprocess
-          from pathlib import Path
-
-          settings = Path("static/settings/index.html")
-          content = settings.read_text()
-
-          commit = subprocess.check_output(
-              ["git", "rev-parse", "HEAD"],
-              text=True
-          ).strip()
-
-          placeholder = "YOUR_COMMIT_SHA_HERE"
-
-          if placeholder not in content:
-              raise SystemExit(
-                  f"Could not find {placeholder} in {settings}"
-              )
-
-          content = content.replace(placeholder, commit)
-          settings.write_text(content)
-
-          print(f"Injected PotentiaMod commit version: {commit}")
-          PY
-
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
