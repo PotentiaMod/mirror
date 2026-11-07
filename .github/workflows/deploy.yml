@@ -57,7 +57,7 @@ jobs:
           import subprocess
           from pathlib import Path
 
-          settings = Path("static/settings.html")
+          settings = Path("static/settings/index.html")
           content = settings.read_text()
 
           commit = subprocess.check_output(
