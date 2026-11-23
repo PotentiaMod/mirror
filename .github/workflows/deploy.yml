@@ -69,9 +69,6 @@ jobs:
           NODE_OPTIONS: --max-old-space-size=4096
           ROUTING_STYLE: hash
 
-      - name: Patch TurboWarp trampoline URL
-        run: python3 patch.py
-
       - name: Fix artifact permissions
         run: chmod -R +rwx ./scratch-gui/build/
 
